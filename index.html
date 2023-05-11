@@ -21,8 +21,9 @@
             const code = params.get('code');
             const id_token = params.get('id_token');
             const status = 'Authorised';
+            const state = params.get('state');
 
-            window.location.replace(`http://localhost:4300/pre-consent?code=${code}&id_token=${id_token}&status=${status}`);
+            window.location.replace(`http://localhost:4300/pre-consent?code=${code}&id_token=${id_token}&status=${status}&state=${state}`);
         }
         else {
             const error = params.get('error');
